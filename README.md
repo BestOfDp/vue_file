@@ -1,5 +1,5 @@
 # vue_file
-自己做的vue前端界面，FileApi(https://github.com/BestOfDp/FileApi)作为后台
+自己做的vue前端界面，FileApi作为后台 (https://github.com/BestOfDp/FileApi)
 
 1.其实不会前端，所以每个组件都是用 element来写的，所以有很多不尽人意的地方：
 (1) 比如前端是没有static目录的，资源文件都放在后台了，所以前端头像响应，就不能实时刷新，还有就是权限控制，当然只有（超管）才可以看到，普通用户看不到。
