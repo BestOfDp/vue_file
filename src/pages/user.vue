@@ -23,13 +23,16 @@
         <myorder></myorder>
       </el-tab-pane>
       <!--<el-tab-pane label="视频">-->
-        <!--<play></play>-->
+      <!--<play></play>-->
       <!--</el-tab-pane>-->
       <!--<el-tab-pane v-if="auth==2" label="添加视频">-->
-        <!--<addVideo></addVideo>-->
+      <!--<addVideo></addVideo>-->
       <!--</el-tab-pane>-->
       <el-tab-pane v-if="auth=='SUPER'" label="权限管理">
         <editauth></editauth>
+      </el-tab-pane>
+      <el-tab-pane v-if="id==1" label="博客管理">
+        <mavon-editor></mavon-editor>
       </el-tab-pane>
     </el-tabs>
   </div>
@@ -46,11 +49,13 @@
   import dellog from '@/components/dellog'
   import play from '@/components/play'
   import addVideo from '@/components/addVideo'
+  import mavonEditor from '@/components/markdown'
 
   export default {
     name: 'user',
     created() {
       this.auth = sessionStorage.getItem('auth');
+      this.id = sessionStorage.getItem('id');
     },
     components: {
       showFile,
@@ -62,7 +67,8 @@
       editauth,
       dellog,
       play,
-      addVideo
+      addVideo,
+      mavonEditor
     },
     data() {
       return {

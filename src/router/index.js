@@ -5,6 +5,8 @@ import regist from '@/components/regist'
 import add from '@/components/regist'
 import user from '@/pages/user'
 import play from '@/pages/play'
+import mavonEditor from '@/components/markdown'
+import blog from '@/pages/blog'
 
 Vue.use(Router)
 
@@ -38,6 +40,18 @@ export default new Router({
       component: play,
       meta: {requiresAuth: true}
     },
+    {
+      path: '/markdown',
+      name: 'editor',
+      component: mavonEditor,
+      meta: {requiresAuth: true}
+    },
+    {
+      path: '/blog',
+      name: 'blog',
+      component: blog
+      // meta: {requiresAuth: true}
+    }
   ]
 })
 

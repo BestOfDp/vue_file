@@ -32,7 +32,8 @@
                   <el-popover
                     placement="right"
                     width="700"
-                    trigger="click">
+                    trigger="click"
+                  >
                     <div style="text-align: center">
                       <span style="font-size: 32px;color:green;font-family: 微软雅黑;">书名: {{scope.row.title}}</span>
                     </div>

@@ -9,6 +9,7 @@ import router from './router'
 import axios from 'axios';
 import Vuex from 'vuex'
 import VideoPlayer from 'vue-video-player'
+import VueMarkdown from 'vue-markdown';
 
 require('video.js/dist/video-js.css');
 require('vue-video-player/src/custom-theme.css');
@@ -45,7 +46,10 @@ router.beforeEach((to, from, next) => {
 new Vue({
   el: '#app',
   router,
-  components: {App},
+  components: {
+    App,
+    VueMarkdown
+  },
   template: '<App/>'
 });
 
